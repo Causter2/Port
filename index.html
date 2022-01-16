@@ -22,13 +22,15 @@
 
         <header>
             <nav class="main_head">
-                <h1 id="logo">
-                    Portfolio
-                </h1>
+                <a id="logo" href="index.html">
+                    <h1>
+                        Portfolio
+                    </h1>
+                </a>
                 <ul>
-                    <li class="sections_header" id="Moi"><a href="#">A propos de moi</a></li>
-                    <li class="sections_header"><a href="#">Mes travaux</a></li>
-                    <li class="sections_header"><a href="#">Me contacter</a></li>
+                    <li class="sections_header" id="Moi"><a href="#A_propos">A propos de moi</a></li>
+                    <li class="sections_header"><a href="#Mes_Travaux">Mes travaux</a></li>
+                    <li class="sections_header"><a href="#Me_contacter">Me contacter</a></li>
                 </ul>
             </nav>
         </header>
@@ -36,7 +38,7 @@
         <section class="hero">
             <h2>Alan Pillet</h2>
             <h3>Mon Portfolio</h3>
-            <button>V</button>
+            <a href="#A_propos"><button>V</button></a>
         </section>
 
         <!--A propos de moi-->
@@ -44,16 +46,16 @@
         <h4 class="info-title" id="A_propos">A propos de moi</h2>
         <section class="description-section" id="infos">
             <div class="info-description">
-                <img class="image-description" src="images/de_dos.jpg" alt="">
+                <img class="image-description" src="images/Portrait.jpg" alt="">
                 <div class="description-text">
-                    <p>Je suis Alan, j'ai 20 et je suis étudiant en corse. <br> Né à Paris, je suis arrivé en Corse quand j'avais 3ans, j'ai passé 5 ans au collège de Prunelli di Fiumorbu et je suis finalement parti au <br> Lycée de Montesoro en tant qu'interne. <br> Et je suis maintenant étudiant en BUT MMI à Corte. <br> Mes plus grandes passions sont la 3D, la musique et le Japon</p>
+                    <p>Je suis Alan, j'ai 20 et je suis étudiant en corse. <br> Né à Paris, je suis arrivé en Corse quand j'avais 3ans, j'ai passé 5 ans au collège de Prunelli di Fiumorbu <br> et je suis finalement parti au Lycée de Montesoro en tant qu'interne. <br> Et je suis maintenant étudiant en BUT MMI à Corte. <br> Mes plus grandes passions sont la 3D, la musique et le Japon</p>
                 </div>
             </div>
         </section>
 
 
         <!--Mes Travaux-->
-        <h2 class="info-title">Mes Travaux</h2>
+        <h2 class="info-title" id="Mes_Travaux">Mes Travaux</h2>
         <section class="info-section" id="infos">
                 <div class="info-card">
                     <div class="container-info-photo">
@@ -81,10 +83,11 @@
         </section>
 
         <!--Me contacter-->
+        <h4 class="info-title" id="Me_contacter">Me Contacter</h2>
 
         <!--Formulaire d'inscription-->
         <section class="formulaire">
-            <fieldset style="width: 25%;">
+            <fieldset>
                 <form>
                     <h1>Inscrivez-vous</h1>
                     <hr>

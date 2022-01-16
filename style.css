@@ -1,6 +1,25 @@
 /* Scroll Bar*/
 
+@-moz-document url-prefix() {
+    html{
+      scrollbar-width: none;
+    }
+}
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
 ::-webkit-scrollbar{
+    width: 0;
+    background: transparent;
+}
+
+::-moz-scrollbar{
     width: 0;
     background: transparent;
 }
@@ -33,6 +52,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 ul {
@@ -66,11 +86,13 @@ a{
 
 body{
     font-family: 'Source Sans Pro', sans-serif;
+    scrollbar-width: none;
 }
 
 /* Header */
 
 .main_head {
+    position: fixed;
     border: solid;
     border-right: 0;
     border-left: 0;
@@ -128,7 +150,7 @@ nav ul {
 }
 
 .hero button{
-    margin-top: 20rem;
+    margin-top: 23rem;
     padding-right: 10px;
     padding-left: 10px;
     background-color: #06112D;
@@ -139,6 +161,11 @@ nav ul {
 .hero h3{
     padding: 2rem;
     font-weight: normal;
+    animation: apparition 0.8s ease-out;
+}
+
+.hero h2{
+    animation: apparition 0.8s ease-out;
 }
 
 @media screen and (max-width: 956px){
@@ -150,7 +177,24 @@ nav ul {
     }
 }
 
+@keyframes apparition {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 /* A propos de moi*/
+
+.description-text{
+    text-align: center;
+    margin-top: 170px;
+    font-size: 24px;
+}
 
 .description-section{
     z-index: 1;
@@ -177,11 +221,13 @@ nav ul {
 }
 
 .image-description{
-    height: 200px;
+    height: 210px;
     width: auto;
-    justify-content: left;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    float: left;
+    margin-left: 90px;
+    margin-top: 120px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 5px black;
 }
 
 @media screen and (max-width: 550px){
@@ -190,6 +236,24 @@ nav ul {
     }
     .image-description{
         height: 170px;
+    }
+}
+
+@media screen and (max-width: 1550px){
+    .image-description{
+        display: block;
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 0;
+        margin-top: 30px;
+    }
+    .info-description{
+        height: 500px;
+    }
+    .description-text{
+        margin-top: 40px;
+        font-size: 22px;
     }
 }
 
@@ -271,7 +335,7 @@ nav ul {
 fieldset{
     margin-top: 70px;
     margin-bottom: 70px;
-    width: 27%;
+    width: 35%;
     background-color: #318CE7;
     box-shadow: 5px 5px 20px 1px 10px rgb(85, 85, 85);
     border: 0px;
@@ -286,6 +350,7 @@ fieldset{
 .formulaire table{
     padding-left: 20px;
     padding-right: 20px;
+    margin: auto;
 }
 
 td{letter-spacing: 1px;
@@ -324,6 +389,7 @@ td{letter-spacing: 1px;
     border-radius: 20px;
     border: 1px solid white;
     padding: 10px;
+    cursor: pointer;
 }
 
 #submit:hover{
@@ -339,6 +405,12 @@ td{letter-spacing: 1px;
     border-bottom: 1px solid white;
     color: white;
     width: 100%;
+}
+
+@media screen and (max-width: 1550px){
+    fieldset{
+        width: 500px;
+    }
 }
 
 /* Parallax */
